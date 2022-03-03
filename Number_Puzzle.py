@@ -9,14 +9,12 @@ def solvable(temp,ideal):
    i=0
    n=m*m-1
    swap=0
-   print(temp)
    while i<=n-1:
          print(i)
          if (temp[i]!=ideal[i]):
             ind=temp[i]-1
             temp[i],temp[ind] = temp[ind],temp[i]
             swap+=1
-            print(temp)
          else:
             i+=1
             
