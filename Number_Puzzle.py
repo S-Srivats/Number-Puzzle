@@ -9,8 +9,7 @@ def solvable(temp,ideal):
    i=0
    n=m*m-1
    swap=0
-   while i<=n-1:
-         print(i)
+   while i<=n-1: 
          if (temp[i]!=ideal[i]):
             ind=temp[i]-1
             temp[i],temp[ind] = temp[ind],temp[i]
@@ -49,7 +48,7 @@ def create_mat(m):
    return r  
 
 #Checks whether the new position to which the user wants to move is a valid location
-def pos_verify(a):
+def pos_verify():
 
    x=(pos%m==0 and new_pos==pos+1) or (new_pos==pos-1 and new_pos%m==0)
    z=new_pos in [i for i in range(1,m*m+1)]
@@ -160,7 +159,7 @@ while(True):
                       
             #check whether it is a valid move.
             #If yes, then make the move
-            if(pos_verify(a)):
+            if(pos_verify()):
                 modify(new_pos)
                 pos=new_pos
             else:
